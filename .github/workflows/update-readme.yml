@@ -1,19 +1,25 @@
-name: Update GitHub Activity
+name: Update README with Recent Activity
 
 on:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *' # Runs automatically every 30 minutes
+    - cron: '0 * * * *' # 每小時執行一次
 
 jobs:
-  update-activity:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Update GitHub Activity
-        uses: TheDanniCraft/activity-log@v1
+      - name: Update README with recent activity
+        uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          GITHUB_USERNAME: "${{ github.actor }}" # Automatically uses your GitHub username
-          GITHUB_TOKEN: "${{ secrets.REPO_TOKEN }}" # Uses the Secret you just configured
+          # 【重要】這裡指定只讀取 mybowling-app 這個倉儲的活動
+          feed_list: "https://github.com/kaigiii/mybowling-app/commits/main.atom"
+          readme_path: "README.md"
+          # 【重要】請確保您的 README 中有這兩個標記
+          comment_tag_name: "activity"
+          commit_message: "chore: auto-update readme with recent activity"
+          gh_token: ${{ secrets.REPO_TOKEN }}
+          max_post_count: 5 # 最多顯示 5 條活動
