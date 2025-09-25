@@ -1,0 +1,20 @@
+name: Update GitHub Activity
+
+on:
+  workflow_dispatch: # Allows manual triggering
+  schedule:
+    - cron: '*/30 * * * *' # Runs automatically every 30 minutes
+
+jobs:
+  update-activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Update GitHub Activity
+        uses: TheDanniCraft/activity-log@v1
+        with:
+          GITHUB_USERNAME: "${{ github.actor }}" # Automatically uses your GitHub username
+          GITHUB_TOKEN: "${{ secrets.REPO_TOKEN }}" # Uses the Secret you just configured
+          REPLACE_MARKER: "activity" # Corresponds to <!--START_SECTION:activity-->
