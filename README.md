@@ -1,8 +1,8 @@
 # My DevOps Automation Project
 
 ### Recent Activities
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
+<!-- activity:START -->
+<!-- activity:END -->
 
 ### About Me
 <!-- MYLINKS:START -->
