@@ -17,4 +17,3 @@ jobs:
         with:
           GITHUB_USERNAME: "${{ github.actor }}" # Automatically uses your GitHub username
           GITHUB_TOKEN: "${{ secrets.REPO_TOKEN }}" # Uses the Secret you just configured
-          REPLACE_MARKER: "activity" # Corresponds to <!--START_SECTION:activity-->
