@@ -1,0 +1,26 @@
+name: Validate README Markers
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Check for START marker
+        run: |
+          if ! grep -q "<!-- activity:START -->" README.md; then
+            echo "::error::README.md is missing the START marker: <!-- activity:START -->"
+            exit 1
+          fi
+      - name: Check for END marker
+        run: |
+          if ! grep -q "<!-- activity:END -->" README.md; then
+            echo "::error::README.md is missing the END marker: <!-- activity:END -->"
+            exit 1
+          fi
