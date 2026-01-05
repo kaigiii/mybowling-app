@@ -2,11 +2,11 @@
 
 ### Recent Activities
 <!-- activity:START -->
+- [chore: auto-update readme with recent activity](https://github.com/kaigiii/mybowling-app/commit/31e0b51e0b126989d0f2dd1c70873773434e7bcb)
 - [chore: auto-update readme with recent activity](https://github.com/kaigiii/mybowling-app/commit/20f246f874477300e7b1d5520a03c09f62688b2f)
 - [chore: auto-update readme with recent activity](https://github.com/kaigiii/mybowling-app/commit/0a4601e5e4079b85607c34ef270d0e8ad7df6b27)
 - [chore: auto-update readme with recent activity](https://github.com/kaigiii/mybowling-app/commit/cf081d767aa4d2cf4dd6f5c5346ee7ec993c89b4)
 - [chore: auto-update readme with recent activity](https://github.com/kaigiii/mybowling-app/commit/9fb1ba547a998d8907eabb59a18072fe206d9c77)
-- [chore: auto-update readme with recent activity](https://github.com/kaigiii/mybowling-app/commit/ef250319cee99f8b1cf3faf625656d96a7d7d013)
 <!-- activity:END -->
 
 ### About Me
